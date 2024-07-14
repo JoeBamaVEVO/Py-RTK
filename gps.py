@@ -82,7 +82,7 @@ def convert_cordinates(lat, long):
 def emit_data(socketIO):
     """Emits the data to the client"""
     try:
-        gps = serial.Serial("COM3", baudrate=9600)
+        gps = serial.Serial("/dev/ttyUSB0", baudrate=9600)
         # Rest of your code here...
     except serial.serialutil.SerialException as e:
         print(f"Error opening COM3 port: {e}")
